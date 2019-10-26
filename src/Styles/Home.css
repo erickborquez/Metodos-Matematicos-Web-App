@@ -1,0 +1,27 @@
+.home{
+    display: grid;
+    grid-template-rows:8rem auto;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-areas: 
+    "header header header header header header header header";
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-areas: ". title user";
+    justify-items: center;
+    align-items: center;
+
+    color: var(--font-color-secondary);
+    background-color: var(--primary-color);
+    text-align: center;
+}
+.header__title{
+    font-size: 4rem;
+    grid-area: title;
+}
+.header__button{
+    grid-area: user;
+}

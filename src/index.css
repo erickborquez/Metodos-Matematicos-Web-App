@@ -1,0 +1,32 @@
+*,*::after,*::before{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --font-color-primary: #202020;
+  --font-color-secondary: #fff7f7;
+  --font-color-tertiary: #acc5c9;
+
+  --primary-color:#204969;
+  --secondary-color: #26be9d;
+
+  --background-primary: #fff7f7;
+  --background-secondary: #dadada;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color:var(--background-primary);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
