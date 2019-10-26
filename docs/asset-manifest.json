@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Metodos-Matematicos-Web-App/static/css/main.3062b510.chunk.css",
+    "main.js": "/Metodos-Matematicos-Web-App/static/js/main.71079477.chunk.js",
+    "main.js.map": "/Metodos-Matematicos-Web-App/static/js/main.71079477.chunk.js.map",
+    "runtime-main.js": "/Metodos-Matematicos-Web-App/static/js/runtime-main.835a7f94.js",
+    "runtime-main.js.map": "/Metodos-Matematicos-Web-App/static/js/runtime-main.835a7f94.js.map",
+    "static/js/2.854cc263.chunk.js": "/Metodos-Matematicos-Web-App/static/js/2.854cc263.chunk.js",
+    "static/js/2.854cc263.chunk.js.map": "/Metodos-Matematicos-Web-App/static/js/2.854cc263.chunk.js.map",
+    "index.html": "/Metodos-Matematicos-Web-App/index.html",
+    "precache-manifest.e5fe0d35a08ea0400835acf2df94d3a2.js": "/Metodos-Matematicos-Web-App/precache-manifest.e5fe0d35a08ea0400835acf2df94d3a2.js",
+    "service-worker.js": "/Metodos-Matematicos-Web-App/service-worker.js",
+    "static/css/main.3062b510.chunk.css.map": "/Metodos-Matematicos-Web-App/static/css/main.3062b510.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.835a7f94.js",
+    "static/js/2.854cc263.chunk.js",
+    "static/css/main.3062b510.chunk.css",
+    "static/js/main.71079477.chunk.js"
+  ]
+}
