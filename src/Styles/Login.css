@@ -1,12 +1,14 @@
-.login_container{
-    display: flex;
-    width:100%;
-    height: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 5rem;
+.login_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+
+  position: relative;
 }
-.login_button{
-    font-size: 1.5rem;
-    margin-left: 1rem;
+.login_button {
+  font-size: 1.5rem;
+  margin-left: 1rem;
 }

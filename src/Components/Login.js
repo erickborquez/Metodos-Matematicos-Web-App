@@ -1,16 +1,18 @@
 import React, { useContext } from 'react';
-import '../Styles/Buttons.css'
-import '../Styles/Login.css'
 import { signInWithGoogle, signOut } from '../firebase'
 
 import { UserContext } from '../Providers/UserProvider';
 
+import UserOptions from './UserOptions';
+
+import '../Styles/Login.css'
+import '../Styles/Buttons.css'
+
 const Login = ({ className }) => {
     const user = useContext(UserContext);
-    console.log(user);
-    return user ? (
+    return user.displayName ? (
         <div className={className + " login_container"}>
-            <div onClick={() => signOut()} className="login_button button button_fill"><span>Sign Out</span></div>
+            <UserOptions className="login_profile" signOut={signOut} />
         </div>
     ) : (
             <div className={className + " login_container"}>

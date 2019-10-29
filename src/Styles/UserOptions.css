@@ -1,0 +1,41 @@
+.user{
+    display: grid;
+    position: relative;
+}
+.user_photo{
+    width:4rem;
+    height:4rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user_photo:hover{
+    cursor: pointer;
+}
+
+.user_menu{
+    width:23rem;
+    background-color: pink;
+    position: absolute;
+    top:110%;
+    left:100%;
+    transform: translateX(-100%);
+
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.user_menu_option{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 1.5rem 1.8rem;
+    transition: all .2s;
+}
+
+.user_menu_option:hover{
+    color:black;
+    cursor: pointer;
+}
+.user_menu_option:not(:last-child){
+    border-bottom: 1px solid black;
+}

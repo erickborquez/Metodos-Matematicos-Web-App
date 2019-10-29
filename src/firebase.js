@@ -56,7 +56,7 @@ export const getUserDocument = async (uid) => {
     if (!uid) return null;
     try {
         const userDocument = await firestore.doc(`users/${uid}`).get();
-        return { uid, ...userDocument };
+        return { uid, ...userDocument.data() };
     } catch (err) {
         console.error('Error feching user', err.mesage);
     }
