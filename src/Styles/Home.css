@@ -1,9 +1,12 @@
 .home{
+    width:100vw;
+    height: 100vh;
     display: grid;
-    grid-template-rows:8rem auto;
+    grid-template-rows:6rem auto;
     grid-template-columns: repeat(8,1fr);
     grid-template-areas: 
-    "header header header header header header header header";
+    "header header header header header header header header"
+    "feed feed feed feed feed feed feed side";
 }
 
 .header{
@@ -18,10 +21,10 @@
     background-color: var(--primary-color);
     text-align: center;
 }
-.header__title{
-    font-size: 4rem;
+.header_title{
+    font-size: 3rem;
     grid-area: title;
 }
-.header__button{
+.header_user{
     grid-area: user;
 }

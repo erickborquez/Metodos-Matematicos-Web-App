@@ -1,0 +1,7 @@
+.side{
+    grid-area: side;
+    background-color: var(--background-secondary);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
