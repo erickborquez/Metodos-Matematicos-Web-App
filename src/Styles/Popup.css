@@ -4,3 +4,68 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.popup_background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup_close-button {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -40%);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  outline: none;
+  box-shadow: -1px 1px 5px rgba(0,0,0,.3);
+
+}
+.popup_close-button:hover {
+  cursor: pointer;
+}
+.popup_close-button:after {
+  content: "";
+  width: 2px;
+  height:2px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .2s;
+}
+
+.popup_close-button:before {
+  content: "";
+  width: 2px;
+  height:2px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: all .2s;
+}
+
+.popup_close-button:hover.popup_close-button:after{
+  background-color: var(--secondary-color);
+  width:60%;
+  border-radius: 3px;
+}
+.popup_close-button:hover.popup_close-button:before{
+  background-color: var(--secondary-color);
+  width:60%;
+  border-radius: 3px;
+
+}

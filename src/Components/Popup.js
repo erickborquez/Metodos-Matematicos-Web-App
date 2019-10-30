@@ -2,26 +2,38 @@ import React, { useRef, useState, useEffect } from 'react';
 import "../Styles/Popup.css"
 
 
-
 const Popup = (props) => {
     const windowEl = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
 
+
     const open = useRef(e => {
         setIsOpen(true);
-        document.addEventListener('click', close.current);
+        document.addEventListener('keydown', handleKeyDown.current);
+        document.addEventListener('click', handleOutsideClick.current);
     })
 
     const close = useRef(e => {
-        console.log(e);
+        document.removeEventListener('click', handleOutsideClick.current);
+        document.removeEventListener('keypress', handleKeyDown.current)
+        setIsOpen(false);
+
+    })
+
+    const handleOutsideClick = useRef(e => {
         if (windowEl.current === null) return;
         if (!windowEl.current.contains(e.target)) {
-            document.removeEventListener('click', close.current);
-            setIsOpen(false);
+            close.current();
         }
     })
-    const handleClick = e => {
-        console.log("cliiick");
+
+    const handleKeyDown = useRef(e => {
+        if (e.key === "Escape") {
+            close.current();
+        }
+    })
+
+    const handleTriggerClick = e => {
         if (!isOpen) open.current(e);
     }
 
@@ -34,10 +46,18 @@ const Popup = (props) => {
 
     return (
         <div className={(props.className || "") + ' popup'}>
-            <div className={"popup_trigger"} onClick={handleClick}>
+            <div className={"popup_trigger"} onClick={handleTriggerClick}>
                 {props.trigger}
             </div>
-            {isOpen ? <div className="popup_content" ref={windowEl} >{props.children}</div> : null}
+            {isOpen ?
+                <div >
+
+                    <div className="popup_background" />
+                    <div className="popup_content" ref={windowEl} >
+                        <button className="popup_close-button" onClick={() => close.current("close?")} />
+                        {props.children}
+                    </div>
+                </div> : null}
         </div>
     )
 }
