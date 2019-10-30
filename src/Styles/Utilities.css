@@ -1,0 +1,17 @@
+
+:root {
+  --font-color-primary: #202020;
+  --font-color-secondary: #fff7f7;
+  --font-color-tertiary: #acc5c9;
+
+  --primary-color: #204969;
+  --primary-color--light: #453880;
+  --secondary-color: #26be9d;
+
+  --background-primary: #fff7f7;
+  --background-secondary: #dadada;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
