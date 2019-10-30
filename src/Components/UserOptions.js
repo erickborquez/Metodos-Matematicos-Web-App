@@ -9,7 +9,7 @@ const UserOptions = (props) => {
     return (
         <Dropdown
             className={(props.className || '') + ' user'}
-            triggerer={<img src={user.photoURL} alt="user_photo" className="user_photo"></img>}
+            triggerer={<div className="user_container-photo"><img src={user.photoURL} alt="user_photo" className="user_photo"></img></div>}
             containerClassName='user_menu'>
             <div className="user_menu_option" onClick={props.signOut}><span>Log Out</span></div>
             <div className="user_menu_option" onClick={props.signOut}><span>Log Out</span></div>

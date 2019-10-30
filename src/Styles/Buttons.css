@@ -3,7 +3,8 @@
   border-radius: 5px;
   font-weight: 600;
   transform: translateY(0px);
-  transition: all 0.2s;
+  transition: all 0.15s;
+  box-shadow: none;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -12,15 +13,22 @@
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   cursor: pointer;
+  color:var(--primary-color--light);
+  box-shadow: -1px 1px 4px rgba(0,0,0,.7);
 }
 .button:active {
-  transform: translateY(-0.5px);
+  transform: translateY(-1px);
+  box-shadow: -1px .5px 3px rgba(0,0,0,.7);
 }
 .button_fill {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+}
+.button_outline:hover{
+  box-shadow: inset 0 0 0 2px var(--font-color-tertiary);
+  color: var(--font-color-tertiary);  
 }
 .button_outline {
   box-shadow: inset 0 0 0 2px var(--font-color-tertiary);
