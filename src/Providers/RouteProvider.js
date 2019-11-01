@@ -6,7 +6,7 @@ export const RouteContext = createContext('/');
 const RouterProvider = ({ children }) => {
 
     const [baseURL, setURL] = useState('/')
-    let repoURL = '/el-algoritmo-del-ritmo/'
+    let repoURL = '/Metodos-Matematicos-Web-App/'
     if (window.location.href.match(repoURL) && baseURL !== repoURL) {
         setURL(repoURL);
     }
