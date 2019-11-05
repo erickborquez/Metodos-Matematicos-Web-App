@@ -5,6 +5,7 @@
   transform: translateY(0px);
   transition: all 0.15s;
   box-shadow: none;
+  display: flex;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -33,4 +34,9 @@
 .button_outline {
   box-shadow: inset 0 0 0 2px var(--font-color-tertiary);
   color: var(--font-color-tertiary);
+}
+
+.button_team{
+  border-radius: 5px;
+  height: 100%;
 }

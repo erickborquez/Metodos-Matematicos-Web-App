@@ -1,0 +1,20 @@
+
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-areas: ". title user";
+    justify-items: center;
+    align-items: center;
+
+    color: var(--font-color-secondary);
+    background-color: var(--primary-color);
+    text-align: center;
+}
+.header_title{
+    font-size: 3rem;
+    grid-area: title;
+}
+.header_user{
+    grid-area: user;
+}

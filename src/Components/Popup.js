@@ -45,8 +45,8 @@ const Popup = (props) => {
     }, []);
 
     return (
-        <div className={(props.className || "") + ' popup'}>
-            <div className={"popup_trigger"} onClick={handleTriggerClick}>
+        <div className={(props.className || "") + ' popup '}>
+            <div className={`${props.className}_trigger popup_trigger`} onClick={handleTriggerClick}>
                 {props.trigger}
             </div>
             {isOpen ?

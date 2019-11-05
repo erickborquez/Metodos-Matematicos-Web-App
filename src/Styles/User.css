@@ -1,8 +1,36 @@
 .user {
-  display: grid;
   position: relative;
+  display:grid;  
+  grid-area: user;
+  grid-template-columns: 1fr 5rem;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "name photo";
+  color:rgba(10,10,10,.7);
+  
 }
+.user_contact{
+  margin-right: .5rem;
+  width:100%;
+  height: 100%;
+  grid-area: name;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.user_contact_name{
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.user_contact_mail{
+  font-size: .9rem;
+}
+
+
 .user_container-photo {
+  grid-area: photo;
   width: 4rem;
   height: 4rem;
   position: relative;
