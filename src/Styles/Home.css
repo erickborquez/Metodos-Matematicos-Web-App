@@ -1,30 +1,3 @@
 .home{
-    width:100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-rows:6rem auto;
-    grid-template-columns: repeat(8,1fr);
-    grid-template-areas: 
-    "header header header header header header header header"
-    "feed feed feed feed feed feed feed side";
-}
-
-.header{
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 50% 1fr;
-    grid-template-areas: ". title user";
-    justify-items: center;
-    align-items: center;
-
-    color: var(--font-color-secondary);
-    background-color: var(--primary-color);
-    text-align: center;
-}
-.header_title{
-    font-size: 3rem;
-    grid-area: title;
-}
-.header_user{
-    grid-area: user;
+    padding-top: 4rem;
 }

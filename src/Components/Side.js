@@ -1,15 +1,19 @@
-import React, { useContext } from 'react';
-import '../Styles/SideBar.css'
+import React from 'react';
+import '../Styles/Side.css'
 
-import { UserContext } from '../Providers/UserProvider';
+import CreateTeam from './CreateTeam';
 
-const SideBar = () => {
-    const user = useContext(UserContext);
+const Side = (props = {}) => {
     return (
-        <nav className="side">
-            <h3 className="side_user_name">{user.displayName || "Not Logged In"}</h3>
-        </nav>
+        <section className="side">
+            {props.teams}
+            <CreateTeam className="side_create-team" />
+            <CreateTeam className="side_create-team" />
+            <CreateTeam className="side_create-team" />
+            <CreateTeam className="side_create-team" />
+
+        </section>
     )
 };
 
-export default SideBar;
+export default Side;
