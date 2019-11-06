@@ -1,9 +1,12 @@
 import React from 'react';
 import '../Styles/Workspace.css'
+import CreatePost from './CreatePost';
 
 const Workspace = () => {
     return (
-        <div className="work-space"> </div>
+        <div className="work-space">
+            <CreatePost />
+        </div>
     );
 }
 

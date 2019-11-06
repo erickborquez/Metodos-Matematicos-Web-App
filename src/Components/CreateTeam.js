@@ -8,9 +8,13 @@ import '../Styles/Utilities.css'
 
 const CreateTeam = ({ className }) => {
     return (
-        <Popup className={className} trigger={(
-            <div className="login_button button button_fill button_team"><span>Popup!!</span></div>
-        )}>
+        <Popup className={className}
+            trigger={(
+                <div className="button_dotted button_team">
+                    <div className="button_dotted_plus" />
+                    <span className="button_dotted_text">Crear nuevo proyecto</span>
+                </div>
+            )}>
             <div className="form_container from_create">
                 <form className="form">
                     <span className="form_title form_title-main">Crear un nuevo equipo</span>

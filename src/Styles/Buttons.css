@@ -40,3 +40,43 @@
   border-radius: 5px;
   height: 100%;
 }
+
+.button_dotted{
+  border: dashed 2px var(--font-color-tertiary);
+  position: relative;
+  background-color: white;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.button_dotted:hover{
+  cursor: pointer;
+}
+.button_dotted_plus{
+  margin-right: 8px;
+  position: relative;
+  width:1.5rem;
+  height:4px;
+  background-color: var(--secondary-color);
+  border-radius: 1px;
+}
+
+.button_dotted_plus:after{
+  content: "";
+  border-radius: 1px;
+  width: 1.5rem;
+  height: 4px;
+  transform: rotate(90deg);
+  background-color: var(--secondary-color);
+  position: absolute;
+  top:0;
+  left:0;
+
+}
+
+.button_dotted_text{
+  font-weight: 600;
+  font-size: 1.5rem;
+}

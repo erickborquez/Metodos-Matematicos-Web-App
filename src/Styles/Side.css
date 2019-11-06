@@ -2,6 +2,17 @@
     grid-area: side;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.side:after{
+    content: "";
+    position: absolute;
+    left:calc(100% + 2rem);
+    height: 100%;
+    width: 1px;
+    background-color: var(--secondary-color-light);
+
 }
 
 .side_create-team:not(:first-child){
