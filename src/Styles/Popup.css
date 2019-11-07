@@ -1,5 +1,5 @@
 .popup_content {
-  z-index: 1;
+  z-index: 15;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -7,6 +7,7 @@
 }
 .popup_background {
   position: fixed;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

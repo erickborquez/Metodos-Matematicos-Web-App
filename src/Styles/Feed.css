@@ -1,13 +1,13 @@
 .feed{
     grid-area: feed;
     width:100%;
-    max-width: 115rem;
+    max-width: 140rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns:21rem 1fr 21rem;
+    grid-template-columns:26rem 1fr 25rem;
     column-gap: 4rem;
-    row-gap: 1rem;
-    grid-template-rows: 6rem 1fr;
+    row-gap: 2rem;
+    grid-template-rows: 4rem 1fr;
     grid-template-areas:
     ". user user"
     "side work-space .";

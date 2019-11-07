@@ -1,15 +1,17 @@
 
 :root {
-  --font-color-primary: #202020;
+  --font-color-primary: #3b3b3b;
   --font-color-secondary: #fff7f7;
-  --font-color-tertiary: #acc5c9;
+  --font-color-tertiary: #2A5154;
+  
 
-  --font-color-primary-light: #404040;
+  --font-color-primary-light: #707070;
 
   --primary-color: #204969;
   --primary-color--light: #453880;
   --secondary-color: #26be9d;
   --secondary-color-light: #5cc2b2;
+  --secondary-color-light-fadded: #5cc2b350;
 
   --secondary-color-background: rgba(201, 220, 224, 0.726);
 

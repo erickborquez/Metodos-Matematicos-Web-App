@@ -1,16 +1,15 @@
 .user {
   position: relative;
-  display:grid;  
-  grid-area: user;
-  grid-template-columns: 1fr 5rem;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas: "name photo";
   color:rgba(10,10,10,.7);
+  display:grid;  
+  grid-template-columns: 1fr 5rem;
+  grid-template-areas: "name photo";
+  justify-items: flex-end;
+  align-items: end;
   
 }
 .user_contact{
-  margin-right: .5rem;
+  margin-right: .8rem;
   width:100%;
   height: 100%;
   grid-area: name;
@@ -18,21 +17,23 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  color: var(--font-color-primary-light);
 }
 
 .user_contact_name{
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 2rem;
+  margin-top: 10px;
 }
 .user_contact_mail{
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 
 .user_container-photo {
   grid-area: photo;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   position: relative;
 }
 
@@ -56,7 +57,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(100,100,100,.1);
   transform: scale(.9, .9);
   transition: all .2s ease-out;
 }
