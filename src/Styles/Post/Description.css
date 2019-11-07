@@ -1,0 +1,6 @@
+.description{
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    color:var(--font-color-primary-light);
+    margin-bottom: 1rem;
+}

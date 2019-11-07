@@ -1,0 +1,12 @@
+.post_title_text{
+    color:var(--font-color-tertiary);
+    font-size: 2.5rem;
+}
+
+.post_title_container{
+    padding: 0 2rem;
+    width:100%;
+    padding-bottom:1rem;
+    border-bottom: 1px solid var(--secondary-color-light-fadded);
+    margin-bottom: 1rem;
+}
