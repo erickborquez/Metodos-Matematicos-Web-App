@@ -6,7 +6,6 @@ import Dropdown from './Dropdown'
 
 const UserOptions = (props) => {
     const user = useContext(UserContext);
-    console.log(user);
     return (
         <div className="user">
             <div className="user_contact">

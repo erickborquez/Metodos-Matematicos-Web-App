@@ -2,8 +2,8 @@ import React from 'react'
 
 import '../Styles/Feed.css'
 import Side from './Side'
-import UserOptions from './UserOptions'
 import Workspace from './Workspace'
+import Login from './Login'
 
 
 const Feed = () => {
@@ -11,7 +11,7 @@ const Feed = () => {
         <main className="feed">
             <Side />
             <Workspace />
-            <UserOptions />
+            <Login />
         </main>
     )
 }

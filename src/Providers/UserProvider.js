@@ -3,14 +3,20 @@ import { auth, createUserProfileDocument } from '../firebase';
 
 export const UserContext = createContext({});
 
+
 const UserProvider = ({ children }) => {
-
-
-    const [user, setUser] = useState({})
-
+    const [user, setUser] = useState({ isLoading: true });
     useEffect(() => {
         const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-            setUser(await createUserProfileDocument(userAuth) || {});
+
+            if (userAuth != null) {
+                setUser({ isLoading: true, logged: true });
+                const userDocument = await createUserProfileDocument(userAuth);
+                setUser({ ...userDocument, isLoading: false, logged: true });
+            } else {
+                setUser({ isLoading: false, logged: false });
+            }
+
         })
         return unsubscribeFromAuth;
     }, []);
