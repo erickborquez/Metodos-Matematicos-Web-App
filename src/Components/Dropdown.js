@@ -13,7 +13,7 @@ const Dropdown = (props) => {
     })
 
     const close = useRef(e => {
-        console.log(e);
+       
         if (menuEl.current === null) return;
         if (!menuEl.current.contains(e.target)) {
             document.removeEventListener('click', close.current);

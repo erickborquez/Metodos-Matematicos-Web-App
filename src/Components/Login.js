@@ -10,7 +10,7 @@ import '../Styles/Buttons.css'
 
 const Login = ({ className }) => {
     const user = useContext(UserContext);
-    console.log(user);
+
     return user.displayName ? (
         <div className={className + " login_container"}>
             <UserOptions className="login_profile" signOut={signOut} />

@@ -17,14 +17,17 @@ const IMAGES = [
     { id: 2, src: background2, alt: "trash", title: "Recoleccion de basura", subtitle: "Siguiente tarea: 16/11/19" },
     { id: 3, src: background3, alt: "trash", title: "Recoleccion de basura", subtitle: "Siguiente tarea: 16/11/19" },
     { id: 4, src: background4, alt: "trash", title: "Recoleccion de basura", subtitle: "Siguiente tarea: 16/11/19" },
+    
 ];
 
 
 const Side = (props = {}) => {
     return (
         <section className="side">
-            {IMAGES.map(img => <TeamCard key={img.id} src={img.src} alt={img.alt} title={img.title} subtitle={img.subtitle} />)}
-            <CreateTeam className="side_create-team" />
+            <div className="side_container">
+                {IMAGES.map(img => <TeamCard key={img.id} src={img.src} alt={img.alt} title={img.title} subtitle={img.subtitle} />)}
+                <CreateTeam className="side_create-team" />
+            </div>
         </section>
     )
 };

@@ -13,10 +13,10 @@
   --secondary-color-light: #5cc2b2;
   --secondary-color-light-fadded: #5cc2b350;
 
-  --secondary-color-background: rgba(201, 220, 224, 0.726);
 
   --background-primary: #fff7f7;
-  --background-secondary: #dadada;
+  --background-secondary: #f0f0f0;
+  --background-tertiary: #efeff8;
 }
 
 .border-bottom {

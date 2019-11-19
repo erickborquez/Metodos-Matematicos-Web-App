@@ -1,5 +1,6 @@
 .user {
-  position: relative;
+  position: sticky;
+  top:2rem;
   color:rgba(10,10,10,.7);
   display:grid;  
   grid-template-columns: 1fr 5rem;

@@ -23,7 +23,19 @@ export const provider = new firebase.auth.GoogleAuthProvider();
 export const signInWithGoogle = () => auth.signInWithRedirect(provider);
 export const signOut = () => auth.signOut();
 
+export const publishPost = async (user, post) => {
+    const data = {
+        auth: user,
+        date: "12 de marzo 13: 23",
+        content: post.content,
+        status: "Pendiente",
+        team: { name: "Recolecccion de basura", url: "#" },
+        coments: [],
+        key: Date.now()
+    }
+    console.log(await firestore.collection('posts').add(data));
 
+}
 
 export const createUserProfileDocument = async (user, aditionalData) => {
     if (!user) return;
