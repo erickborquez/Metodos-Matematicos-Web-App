@@ -1,0 +1,45 @@
+.commentary {
+  padding-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas:
+    "user-photo data"
+    "user-photo content";
+  gap: 1rem;
+  border-bottom: 1px solid var(--secondary-color-light-fadded);
+
+}
+
+.commentary:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.commentary_photo {
+  width: 100%;
+  grid-area: user-photo;
+  border-radius: 3px;
+}
+.commentary_data {
+  grid-area: data;
+}
+.commentary_data_user-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.commentary_data_user-name {
+  font-size: 1.8rem;
+}
+.commentary_data_date {
+  font-size: 1.2rem;
+}
+.commentary_content {
+  grid-area: content;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+
+}

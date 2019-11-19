@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { UserContext } from '../../Providers/UserProvider';
+
+
 import Description from './Description'
 import Title from './Title';
 import Todo from './Todo'
 
-
 import '../../Styles/Post/Post.css'
 import Ubication from './Ubication';
+import PostImage from './PostImage';
+import Commentary from './Commentary';
+import AddCommentary from './AddCommentary';
 
+
+const onAddCommentary = (event) => {
+    console.log(event);
+}
 
 
 const Post = (props) => {
-    const { auth, date, team, status, content } = props;
-    console.log(auth);
+    const { auth, date, team, status, content, comments } = props;
+    const user = useContext(UserContext);
+
     return (
         <div className="post">
             <img src={auth.photoURL} alt={`${auth.displayName}`} className="post_photo" />
@@ -32,12 +43,24 @@ const Post = (props) => {
                             return (<Todo {...element} key={key} />);
                         case "Ubication":
                             return (<Ubication {...element} key={key} />)
+                        case "Image":
+                            return (<PostImage {...element} key={key} />)
                         default:
                             console.error("Element has no type, Post.js");
                             break;
                     }
                     return null;
                 })}
+                {comments[0] ? (
+                    <div className="post_comments">
+                        {comments.map((commentary, i) => {
+                            const key = `commentary-${i}`
+                            return (<Commentary {...commentary} key={key} />)
+                        })}
+                    </div>
+                ) : null}
+                {!user.isLoading && user.logged ? (<AddCommentary user={user} onAddCommentary={onAddCommentary} />) : null}
+
             </div>
         </div>
     )

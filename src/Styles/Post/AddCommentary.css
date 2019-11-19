@@ -1,0 +1,29 @@
+.add-commentary {
+  background-color: var(--background-secondary);
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1rem;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.add-commentary_photo {
+  width: 100%;
+}
+.add-commentary_textarea{
+    resize:vertical;
+    min-height: 6rem;
+    border-radius: 3px;
+    padding: 1rem;
+    outline: none;
+    border: 2px solid rgba(0,0,0,.2);
+    font-size: 2rem;
+}
+
+.add-commentary_textarea:hover{
+    cursor: pointer;
+    border: 2px solid var(--secondary-color-light);
+}
+
+.add-commentary_textarea:focus{
+    border: 2px solid var(--secondary-color-light);
+}

@@ -1,6 +1,5 @@
 .post {
   margin-top: 2rem;
-  margin-bottom: 5rem;
   width: 100%;
   display: grid;
   grid-template-columns: 5rem 1fr;
@@ -12,6 +11,9 @@
     ". content";
 }
 
+.post:not(:last-child){
+    margin-bottom: 5rem;
+}
 .post_photo {
   grid-area: pic;
   width: 100%;
@@ -65,5 +67,13 @@
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 0 3px rgba(0,0,0,.4);
-    padding: 1.5rem 0;
+    padding-top: 1.5rem;
+}
+
+.post_comments{
+    margin-top: 2rem;
+    background-color: var(--background-secondary);
+    padding: 2rem 2rem;
+    padding-bottom: 0;
+    border-top: 2px solid var(--secondary-color);
 }
