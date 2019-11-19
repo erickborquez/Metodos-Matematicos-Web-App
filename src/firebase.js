@@ -30,7 +30,7 @@ export const publishPost = async (user, post) => {
         content: post.content,
         status: "Pendiente",
         team: { name: "Recolecccion de basura", url: "#" },
-        coments: [],
+        comments: [],
         key: Date.now()
     }
     console.log(await firestore.collection('posts').add(data));

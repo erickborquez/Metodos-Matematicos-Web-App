@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styles/Workspace.css'
 import CreatePost from './CreatePost/CreatePost';
 
@@ -7,6 +7,9 @@ import Post from './Post/Post';
 import photoURL from '../assets/perfil.png'
 
 import trash from '../assets/background-3.jpg'
+import { firestore } from '../firebase';
+import { colletIdsAndDocs } from '../utilities';
+
 
 const POSTS = [
     {
@@ -14,35 +17,27 @@ const POSTS = [
         date: "12 de marzo 13:23",
         content: [
             {
-                type: "Title",
-                text: "Recoger la basura de algun mercado",
+                type: "title",
+                value: "Recoger la basura de algun mercado",
                 color: ""
             },
             {
-                type: "Description",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                type: "description",
+                value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             },
             {
-                type: "Todo",
+                type: "subtitle",
+                value: "Hacer estas cosas"
+            },
+            {
+                type: "todo",
                 title: "Hacer estas cosas.",
-                data: [
-                    {
-                        text: "Lorem ipsum dolor sit amet",
-                        completed: false
-                    },
-                    {
-                        text: "Consectetur adipiscing elit",
-                        completed: true
-                    },
-                    {
-                        text: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                        completed: true
-                    }
-                ]
+                value: "Lorem ipsum",
+                completed: true
 
             },
             {
-                type: "Ubication",
+                type: "ubication",
                 data: [
                     {
 
@@ -50,12 +45,12 @@ const POSTS = [
                 ]
             },
             {
-                type: "Image",
+                type: "image",
                 src: trash,
                 alt: "This is an image"
             },
             {
-                type: "Description",
+                type: "description",
                 text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             }
 
@@ -81,60 +76,29 @@ const POSTS = [
             },
         ],
         key: 1
-    },
-    {
-        auth: { displayName: "Erick Borquez", photoURL: photoURL, mail: "erickborquez@gmail.com" },
-        date: "12 de marzo 13:23",
-        content: [
-            {
-                type: "Title",
-                text: "Recoger la basura de algun mercado",
-                color: ""
-            },
-            {
-                type: "Description",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            },
-            {
-                type: "Todo",
-                data: [
-                    {
-                        text: "Ir y recoger basura",
-                        completed: false
-                    },
-                    {
-                        text: "Ir y recoger basura",
-                        completed: true
-                    }
-                ]
-
-            },
-            {
-                type: "Ubication",
-                data: [
-                    {
-
-                    }
-                ]
-            },
-            {
-                type: "Description",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            }
-
-        ],
-        comments: [],
-        status: "Pendiente",
-        team: { name: "Recolecccion de basura", url: "#" },
-        key: 2
     }
 ]
 
 const Workspace = () => {
+
+    const [posts, setPosts] = useState(POSTS);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await firestore.collection('posts').get()
+            const postsFetched = result.docs.map(colletIdsAndDocs);
+            const newPosts = [...postsFetched, ...posts];
+            console.log('object', newPosts);
+
+            setPosts(newPosts);
+        }
+        fetchData();
+    }, [posts])
+
     return (
         <div className="work-space">
             <CreatePost />
-            {POSTS.map(post => {
+            {posts.map(post => {
                 return <Post {...post} key={post.key} ></Post>
             })}
         </div>
