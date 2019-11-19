@@ -88,12 +88,10 @@ const Workspace = () => {
             const result = await firestore.collection('posts').get()
             const postsFetched = result.docs.map(colletIdsAndDocs);
             const newPosts = [...postsFetched, ...posts];
-            console.log('object', newPosts);
-
             setPosts(newPosts);
         }
         fetchData();
-    }, [posts])
+    }, [])
 
     return (
         <div className="work-space">

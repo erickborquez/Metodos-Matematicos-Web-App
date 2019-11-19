@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Metodos-Matematicos-Web-App/static/css/main.943c114f.chunk.css",
-    "main.js": "/Metodos-Matematicos-Web-App/static/js/main.8512a253.chunk.js",
-    "main.js.map": "/Metodos-Matematicos-Web-App/static/js/main.8512a253.chunk.js.map",
+    "main.js": "/Metodos-Matematicos-Web-App/static/js/main.4b9858a0.chunk.js",
+    "main.js.map": "/Metodos-Matematicos-Web-App/static/js/main.4b9858a0.chunk.js.map",
     "runtime-main.js": "/Metodos-Matematicos-Web-App/static/js/runtime-main.835a7f94.js",
     "runtime-main.js.map": "/Metodos-Matematicos-Web-App/static/js/runtime-main.835a7f94.js.map",
     "static/js/2.f8e95f48.chunk.js": "/Metodos-Matematicos-Web-App/static/js/2.f8e95f48.chunk.js",
     "static/js/2.f8e95f48.chunk.js.map": "/Metodos-Matematicos-Web-App/static/js/2.f8e95f48.chunk.js.map",
     "index.html": "/Metodos-Matematicos-Web-App/index.html",
-    "precache-manifest.5def9e52686868c40947337bfe1253bc.js": "/Metodos-Matematicos-Web-App/precache-manifest.5def9e52686868c40947337bfe1253bc.js",
+    "precache-manifest.a7ec44f7c64d729ed70a05e9060fdd20.js": "/Metodos-Matematicos-Web-App/precache-manifest.a7ec44f7c64d729ed70a05e9060fdd20.js",
     "service-worker.js": "/Metodos-Matematicos-Web-App/service-worker.js",
     "static/css/main.943c114f.chunk.css.map": "/Metodos-Matematicos-Web-App/static/css/main.943c114f.chunk.css.map",
     "static/media/background-1.jpg": "/Metodos-Matematicos-Web-App/static/media/background-1.322c723a.jpg",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.835a7f94.js",
     "static/js/2.f8e95f48.chunk.js",
     "static/css/main.943c114f.chunk.css",
-    "static/js/main.8512a253.chunk.js"
+    "static/js/main.4b9858a0.chunk.js"
   ]
 }
