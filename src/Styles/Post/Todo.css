@@ -1,5 +1,6 @@
 .post_todo{
-    padding: 2rem 3rem;
+    padding: 0rem 3rem;
+    margin-bottom: 2rem;
 }
 .post_todo_title{
     font-size: 2rem;
@@ -7,12 +8,7 @@
     margin-bottom: 1rem;
     
 }
-.post_todo_list-container{
-    padding: 2rem 2rem;
-    border-top: 1px solid var(--secondary-color-light-fadded);
-    border-bottom: 1px solid var(--secondary-color-light-fadded);
 
-}
 .post_todo_element{
     font-size: 2rem;
 }
@@ -20,4 +16,9 @@
 .post_todo_element--completed{
     color:var(--secondary-color);
     text-decoration: line-through;
+}
+.post_todo_list-container{
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
 }
