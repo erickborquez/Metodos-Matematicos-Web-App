@@ -1,0 +1,19 @@
+.add-subtitle {
+  color: red;
+}
+.add-subtitle_text-area {
+  height: 3rem;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 3rem;
+  transition: all 0.2s;
+  margin-bottom: 1rem;
+}
+
+.add-subtitle_text-area:hover {
+  color: var(--font-color-tertiary);
+  cursor: pointer;
+}

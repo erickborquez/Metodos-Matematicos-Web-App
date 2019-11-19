@@ -1,0 +1,62 @@
+.add-todo {
+  margin-bottom: .5rem;
+  padding: .5rem 2rem;
+}
+.add-todo_task-container {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 1rem;
+  justify-items: start;
+  align-items: center;
+}
+.add-todo_complete-task_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.add-todo_complete-task {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 10rem;
+  transition: all 0.2s;
+}
+
+.add-todo_complete-task::after {
+  content: "";
+  position: absolute;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(90deg);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+
+  background-color: var(--secondary-color);
+}
+
+.add-todo_task--completed.add-todo_complete-task {
+  width: 4px;
+}
+
+.add-todo_task_text-area {
+  height: 3rem;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 3rem;
+  transition: all 0.2s;
+}
+
+.add-todo_task_text-area.add-todo_task--completed {
+  text-decoration: line-through;
+  color: var(--secondary-color);
+}
