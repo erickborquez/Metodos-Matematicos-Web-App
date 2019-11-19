@@ -5,18 +5,10 @@ import AddElement from './AddElement';
 
 import '../../Styles/CreatePost/CreatePost.css'
 
-
-
-//            <span className='create-post_popup-title'>Añade una seccion</span>
-
-
-//<textarea value={content} onChange={e => handleChange(e)} className="create-post_text-area create-post_popup_text-area" />
-
 const CreateContent = ({ content, handleChange }) => {
     return (
         <div className="create-post_popup-container">
             <AddElement />
-
         </div>);
 }
 

@@ -9,7 +9,7 @@ const AddSubtitle = ({ onSave, configuration }) => {
 
     useEffect(() => () => {
         onSave({
-            type: 'description',
+            type: 'subtitle',
             value: text
         });
     }, [text, onSave])

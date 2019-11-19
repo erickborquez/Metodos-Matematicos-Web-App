@@ -60,7 +60,7 @@ const AddElement = () => {
         for (const element in elementsData.current) {
             elements.push(elementsData.current[element]);
         }
-        publishPost(user,{ content: elements })
+        publishPost(user, { content: [{ type: 'title', value: title }, ...elements] });
     }
 
     const handleNewElement = (event, element) => {

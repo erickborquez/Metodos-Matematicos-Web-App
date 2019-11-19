@@ -2,10 +2,10 @@ import React from 'react'
 
 import '../../Styles/Post/Description.css'
 
-const Description = ({ text }) => {
+const Description = ({ value }) => {
     return (
         <div className="description">
-            {text}
+            {value}
         </div>
     )
 }

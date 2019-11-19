@@ -12,6 +12,7 @@ import Ubication from './Ubication';
 import PostImage from './PostImage';
 import Commentary from './Commentary';
 import AddCommentary from './AddCommentary';
+import Subtitle from './Subtitle';
 
 
 const onAddCommentary = (event) => {
@@ -35,15 +36,17 @@ const Post = (props) => {
                 {content.map((element, i) => {
                     const key = `${element.tye}-${i}`
                     switch (element.type) {
-                        case "Description":
+                        case "description":
                             return (<Description {...element} key={key} />);
-                        case "Title":
+                        case "title":
                             return (<Title {...element} key={key} />);
-                        case "Todo":
+                        case "subtitle":
+                            return (<Subtitle {...element} key={key} />);
+                        case "todo":
                             return (<Todo {...element} key={key} />);
-                        case "Ubication":
+                        case "ubication":
                             return (<Ubication {...element} key={key} />)
-                        case "Image":
+                        case "image":
                             return (<PostImage {...element} key={key} />)
                         default:
                             console.error("Element has no type, Post.js");
