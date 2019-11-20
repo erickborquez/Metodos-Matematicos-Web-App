@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Metodos-Matematicos-Web-App/static/css/main.943c114f.chunk.css",
-    "main.js": "/Metodos-Matematicos-Web-App/static/js/main.4b9858a0.chunk.js",
-    "main.js.map": "/Metodos-Matematicos-Web-App/static/js/main.4b9858a0.chunk.js.map",
+    "main.css": "/Metodos-Matematicos-Web-App/static/css/main.fe522751.chunk.css",
+    "main.js": "/Metodos-Matematicos-Web-App/static/js/main.bedafaa2.chunk.js",
+    "main.js.map": "/Metodos-Matematicos-Web-App/static/js/main.bedafaa2.chunk.js.map",
     "runtime-main.js": "/Metodos-Matematicos-Web-App/static/js/runtime-main.835a7f94.js",
     "runtime-main.js.map": "/Metodos-Matematicos-Web-App/static/js/runtime-main.835a7f94.js.map",
-    "static/js/2.f8e95f48.chunk.js": "/Metodos-Matematicos-Web-App/static/js/2.f8e95f48.chunk.js",
-    "static/js/2.f8e95f48.chunk.js.map": "/Metodos-Matematicos-Web-App/static/js/2.f8e95f48.chunk.js.map",
+    "static/js/2.b466fcda.chunk.js": "/Metodos-Matematicos-Web-App/static/js/2.b466fcda.chunk.js",
+    "static/js/2.b466fcda.chunk.js.map": "/Metodos-Matematicos-Web-App/static/js/2.b466fcda.chunk.js.map",
     "index.html": "/Metodos-Matematicos-Web-App/index.html",
-    "precache-manifest.a7ec44f7c64d729ed70a05e9060fdd20.js": "/Metodos-Matematicos-Web-App/precache-manifest.a7ec44f7c64d729ed70a05e9060fdd20.js",
+    "precache-manifest.128af95e0b91fa00501f53b481a3556c.js": "/Metodos-Matematicos-Web-App/precache-manifest.128af95e0b91fa00501f53b481a3556c.js",
     "service-worker.js": "/Metodos-Matematicos-Web-App/service-worker.js",
-    "static/css/main.943c114f.chunk.css.map": "/Metodos-Matematicos-Web-App/static/css/main.943c114f.chunk.css.map",
+    "static/css/main.fe522751.chunk.css.map": "/Metodos-Matematicos-Web-App/static/css/main.fe522751.chunk.css.map",
     "static/media/background-1.jpg": "/Metodos-Matematicos-Web-App/static/media/background-1.322c723a.jpg",
     "static/media/background-2.jpg": "/Metodos-Matematicos-Web-App/static/media/background-2.d4856c70.jpg",
     "static/media/background-3.jpg": "/Metodos-Matematicos-Web-App/static/media/background-3.b0792e44.jpg",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.835a7f94.js",
-    "static/js/2.f8e95f48.chunk.js",
-    "static/css/main.943c114f.chunk.css",
-    "static/js/main.4b9858a0.chunk.js"
+    "static/js/2.b466fcda.chunk.js",
+    "static/css/main.fe522751.chunk.css",
+    "static/js/main.bedafaa2.chunk.js"
   ]
 }
