@@ -4,7 +4,7 @@ import '../../Styles/Post/AddCommentary.css'
 
 
 const AddCommentary = ({ user, onAddCommentary }) => {
-    const [text, setText] = useState('asd');
+    const [text, setText] = useState('');
 
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {

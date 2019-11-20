@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import "../Styles/Popup.css"
 
 
 const Popup = (props) => {
     const windowEl = useRef(null);
-    const [isOpen, setIsOpen] = useState(false);
-
+    const {isOpen, setIsOpen} = props;
 
     const open = useRef(e => {
         setIsOpen(true);

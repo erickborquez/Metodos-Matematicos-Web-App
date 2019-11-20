@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Popup from './Popup';
 
 import '../Styles/Buttons.css'
@@ -7,8 +7,9 @@ import '../Styles/Form.css'
 import '../Styles/Utilities.css'
 
 const CreateTeam = ({ className }) => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
-        <Popup className={className}
+        <Popup className={className} isOpen={isOpen} setIsOpen={setIsOpen}
             trigger={(
                 <div className="button_dotted button_team">
                     <div className="button_dotted_plus" />
