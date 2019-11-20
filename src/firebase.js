@@ -2,6 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyAZ9pVpUy4RIqoAL_SEiiZOb8Ox2MwcfKo",
     authDomain: "tests-analisis-numericos.firebaseapp.com",
@@ -26,14 +27,14 @@ export const signOut = () => auth.signOut();
 export const publishPost = async (user, post) => {
     const data = {
         auth: user,
-        date: "12 de marzo 13: 23",
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         content: post.content,
         status: "Pendiente",
         team: { name: "Recolecccion de basura", url: "#" },
         comments: [],
         key: Date.now()
     }
-    console.log(await firestore.collection('posts').add(data));
+    return await firestore.collection('posts').add(data);
 
 }
 

@@ -26,7 +26,6 @@ const AddTodo = ({ onSave, configuration }) => {
     const completedStyle = task.completed ? "add-todo_task--completed" : "";
 
     useEffect(() => {
-        console.log(task.completed);
         onSave({ ...task, value: text, type: "todo", completed: task.completed });
 
     }, [onSave, task, text])

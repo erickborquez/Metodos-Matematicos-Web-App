@@ -42,7 +42,7 @@ const elements =
 
     ]
 
-const AddElement = () => {
+const AddElement = ({closePopup}) => {
     const [title, setTitle] = useState("Añadir titulo");
     const [selectingSection, setSelectingSection] = useState(false);
     const [selected, setSelected] = useState(false);
@@ -50,17 +50,22 @@ const AddElement = () => {
     const [elementsComponent, setElementsComponent] = useState([]);
     const elementsData = useRef({});
 
+    const [submiting, setSubmiting] = useState(false);
+
     const [hasElements, setHasElements] = useState(false);
 
     const user = useContext(UserContext);
 
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
+        if (submiting) return;
         const elements = [];
+        setSubmiting(true);
         for (const element in elementsData.current) {
             elements.push(elementsData.current[element]);
         }
-        publishPost(user, { content: [{ type: 'title', value: title }, ...elements] });
+        await publishPost(user, { content: [{ type: 'title', value: title }, ...elements] });
+        closePopup();
     }
 
     const handleNewElement = (event, element) => {
@@ -69,7 +74,6 @@ const AddElement = () => {
         const onSave = (data) => {
             elementsData.current[key] = { key, ...data };
             if (!hasElements) setHasElements(true);
-            console.log(elementsData.current);
         }
         setElementsComponent([...elementsComponent,
         <element.component key={key} onSave={onSave} configuration={configuration} />

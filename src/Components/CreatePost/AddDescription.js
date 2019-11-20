@@ -5,7 +5,7 @@ import '../../Styles/CreatePost/AddDescription.css'
 const AddDescription = ({ onSave }) => {
     const [text, setText] = useState('');
 
-    useEffect(() => () => {
+    useEffect(() => {
         onSave({
             type: 'description',
             value: text
